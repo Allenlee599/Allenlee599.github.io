@@ -1,1 +1,98 @@
-
+<!DOCTYPE>  <!--註解使用-->
+<html>
+	<head>
+    <style type="mystyle.css">
+		body {
+			background: -webkit-linear-gradient(-8deg, rgb(255, 255, 255), rgb(0, 59, 119))
+		}
+		::selection {
+			color: white;
+			background: red;
+		}
+		::marker {
+			color: green;
+			font_size: 16px;
+		}
+		input[type=text] {
+			width: 300px;
+			display: block;
+			margin-bottom: 40px;
+			background-color: white;
+			color: gray;
+		}
+		input[type=button] {
+			width: 80px;
+			margin-left: 200px;
+			display: block;
+			background-color: black;
+			color: white;
+		}
+		.line0 {
+			font-family: "Arial", sans-serif;
+		}
+		.line1 {
+			font-family: "Brush Script MT", cursive;
+		}
+		.line2 {
+			font-family: "Copperplate", fantasy;
+		}
+		</style> <!--css用到了背景的漸層，選取字樣會變色，改變list的顏色及大小，改變input text and button的長寬顏色及背景顏色，最後改變自行-->
+		<meta charset="utf-8">
+		<title>Allen's Profile</title>
+		<link rel="stylesheet" href="mystyle.css">
+	</head>
+		<body>  <!--css用到了背景的漸層，選取字樣會變色，改變list的顏色及大小，改變input text and button的長寬顏色及背景顏色，最後改變自行-->
+			<?php
+				date_default_timezone_set('Asia/Taipei');
+				$datetime = date("H");
+				
+				if($datetime < "10"){
+					echo "GOOD MORNING!";
+				}elseif($datetime < "14"){
+					echo "GOOD AFTERNOON!";
+				}elseif($datetime < "18"){
+					echo "GOOD EVENING!";
+				}else{
+					echo "GOOD NIGHT!";
+				}
+			?>
+			
+			<div>
+				<h1 class="line0">ABOUT ME</h1>
+				<ul>
+					<li>My name is Allen</li>
+					<li>I love playing sports</li>
+					<li>I love reading books</li>
+				</ul>
+				<hr>
+				<h2 class="line1">More details about me</h2>
+				<ol>
+						<li>My favorit sport is basketball</li>
+						<li>My favorite genre is martial art novel</li>
+						<li>My favorite kind of animals is dogs</li>
+				</ol>
+				
+				<h2 class ="line2">For questions or further contact</h2>
+				<h3 class="line2">Please fill in these blanks, thank you</h3>
+				<br>
+				<form name="input" action="" method="get">
+					Your name:<input type="text" name="Name" value="your name" size="24">
+		
+					Questions:<input type="text" name="Questions" value="type your questions" size="24">
+					
+					E-mail:<input type="text" name="E-mail" value="your E-mail" size="24">
+					<input type="button" value="Submit">
+				</form>
+				</br>
+			</div>
+			<p>Have a nice day!</p
+			
+		</body>
+		
+	<script>
+		onload=showmsg();
+		function showmsg(){
+			alert('Welcome To My Page!')
+		}
+	</script>
+</html>
